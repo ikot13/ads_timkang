@@ -1,18 +1,20 @@
 <?php
-
+use App\Models\Student;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+Route::get('/student/create', function () {
+    $student = new $student();
+    $student->first_name = 'jericho';
+    $student->last_name = 'timakang';
+    $student->email = 'jericho@example.com';
+    $student->save();
+    return 'Student Created!';
+}):
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/students', function () {
+    $student = $student::all();
+    return $students;
 });
+
+Route
+?>
